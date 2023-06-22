@@ -1,0 +1,85 @@
+kind: RuleSet
+version: 7
+items:
+  - dir: rulesets/00-discovery
+  - dir: rulesets/azure
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/camel3
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/droolsjbpm
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/eap6
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/eap7
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/eap8
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/eapxp
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/filemappings
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/fuse
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/fuse-service-works
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/hibernate
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/jakarta-ee9
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/openjdk7
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/openjdk11
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/openjdk17
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/openliberty
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/openshift
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/os
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/quarkus
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/rhr
+    dependencies:
+      - "@rulesets/00-discovery"
+      - "@rulesets/technology-usage"
+  - dir: rulesets/technology-usage
