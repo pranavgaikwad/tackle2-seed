@@ -2,6 +2,7 @@ kind: RuleSet
 version: 7
 items:
     - uuid: 10667615-e067-45b4-a925-563a79ea0949
+      name: ".discovery"
       directory: rulesets/00-discovery
       checksum: 3a5cf5265128eddb8e007c9c76cfc1ab689a12c22920d7a16a62b2d8d2cfea4f
     - uuid: 2eed70c0-305c-4061-bb92-d638ee834e47
@@ -125,6 +126,7 @@ items:
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: e9cdb39bdf8e5149009007ae5a5bc31817824865d349e36a9c81c9cbd8a23d7d
     - uuid: 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      name: ".technology-usage"
       directory: rulesets/technology-usage
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
