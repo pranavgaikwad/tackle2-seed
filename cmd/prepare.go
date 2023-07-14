@@ -75,10 +75,18 @@ func main() {
 				if err != nil {
 					panic(err)
 				}
+				rs.SeedDir = seed.Dir()
 				if rs.UUID == "" {
 					rs.UUID = uuid.NewString()
 				}
 				rulesetUUIDs[rs.Directory] = rs.UUID
+
+				checksum, cErr := pkg.ChecksumDir(rs.Dir())
+				if cErr != nil {
+					panic(cErr)
+				}
+				rs.Checksum = fmt.Sprintf("%x", checksum)
+
 				err = item.Encode(rs)
 				if err != nil {
 					panic(err)

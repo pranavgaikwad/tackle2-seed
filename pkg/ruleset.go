@@ -48,22 +48,22 @@ type RuleSet struct {
 	Dependencies []string `yaml:",omitempty"`
 	Checksum     string   `yaml:",omitempty"`
 	Rules        []Rule   `yaml:"-"`
-	seedDir      string   `yaml:"-"`
+	SeedDir      string   `yaml:"-"`
 }
 
 // Dir returns the path to the directory containing the rule files.
 func (r *RuleSet) Dir() string {
-	return path.Join(r.seedDir, r.Directory)
+	return path.Join(r.SeedDir, r.Directory)
 }
 
 // Yaml returns the path to the ruleset.yaml file.
 func (r *RuleSet) Yaml() string {
-	return path.Join(r.seedDir, r.Directory, RuleSetYaml)
+	return path.Join(r.SeedDir, r.Directory, RuleSetYaml)
 }
 
 // Image returns the path to the image.svg file.
 func (r *RuleSet) Image() string {
-	return path.Join(r.seedDir, r.Directory, RuleSetImage)
+	return path.Join(r.SeedDir, r.Directory, RuleSetImage)
 }
 
 // Load populates the seed representation with values

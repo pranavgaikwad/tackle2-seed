@@ -61,7 +61,7 @@ func (r *Seed) DecodeItems() (decoded []interface{}, err error) {
 			}
 			decoded = append(decoded, item)
 		case KindRuleSet:
-			item := RuleSet{seedDir: r.Dir()}
+			item := RuleSet{SeedDir: r.Dir()}
 			err = encoded.Decode(&item)
 			if err != nil {
 				return
@@ -157,6 +157,41 @@ func Checksum(r io.Reader) (sum []byte, err error) {
 	if err != nil {
 		err = liberr.Wrap(err)
 		return
+	}
+	sum = h.Sum(nil)
+	return
+}
+
+// ChecksumDir calculates a checksum for the contents of a directory.
+func ChecksumDir(dir string) (sum []byte, err error) {
+	entries, err := os.ReadDir(dir)
+	if err != nil {
+		err = liberr.Wrap(err)
+	}
+	h := sha256.New()
+	for _, entry := range entries {
+		if entry.IsDir() {
+			continue
+		}
+		err = func() (fErr error) {
+			f, fErr := os.Open(path.Join(dir, entry.Name()))
+			if fErr != nil {
+				fErr = liberr.Wrap(fErr)
+				return
+			}
+			defer f.Close()
+			chk, fErr := Checksum(f)
+			if fErr != nil {
+				fErr = liberr.Wrap(fErr)
+				return
+			}
+			_, fErr = fmt.Fprint(h, chk)
+			if fErr != nil {
+				fErr = liberr.Wrap(fErr)
+				return
+			}
+			return
+		}()
 	}
 	sum = h.Sum(nil)
 	return

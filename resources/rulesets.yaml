@@ -1,110 +1,132 @@
 kind: RuleSet
 version: 7
 items:
-  - uuid: 10667615-e067-45b4-a925-563a79ea0949
-    directory: rulesets/00-discovery
-  - uuid: 2eed70c0-305c-4061-bb92-d638ee834e47
-    directory: rulesets/azure
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: e92057bc-5b66-4f7d-976f-f76aa3ad50e6
-    directory: rulesets/camel3
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: eb900f9e-6ff3-413d-9023-167765ce1311
-    directory: rulesets/droolsjbpm
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 17b03c9f-ba19-4680-a3c2-ca159c5d74f0
-    directory: rulesets/eap6
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 1a523b92-1fb3-422b-aaf7-35f43a259fb9
-    directory: rulesets/eap7
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 3c471738-dfcf-46e8-b803-df07c304acc7
-    directory: rulesets/eap8
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 288037b2-279f-4d11-9ea9-f91ff274447f
-    directory: rulesets/eapxp
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: d51b30c0-a0a1-49ff-a0bb-861c43343c6b
-    directory: rulesets/filemappings
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 66bfcc38-3816-4d87-8d10-f8374af73c34
-    directory: rulesets/fuse
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 416ffaad-3d9b-4808-953e-623d9f2d7314
-    directory: rulesets/fuse-service-works
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: e4db9c96-103c-409b-a347-098e7a04f172
-    directory: rulesets/hibernate
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: e461ca80-60d1-4083-a298-f1983b5c9b24
-    directory: rulesets/jakarta-ee9
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 72b74cb6-dba7-452d-93a3-1a26855051e0
-    directory: rulesets/openjdk7
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: e83339db-4dd8-4b06-bb31-6dfcb29c964a
-    directory: rulesets/openjdk11
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: c73c3986-64a5-4c2e-8149-fba57347af99
-    directory: rulesets/openjdk17
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 53ba6b0f-ad48-4211-9673-a2065c2a4b4d
-    directory: rulesets/openliberty
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: cf7aa432-5881-43dc-bdbc-a522ebd24299
-    directory: rulesets/openshift
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: feb6648e-dd3c-4536-bf99-e40ee124653d
-    directory: rulesets/os
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 23f92444-0366-47c8-abc2-f67e6bcd95f2
-    directory: rulesets/quarkus
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 9179982c-6007-4e40-b67c-9a7272e44e87
-    directory: rulesets/rhr
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-  - uuid: 1b2a0eef-511c-4c07-a36a-d301b15d8207
-    directory: rulesets/technology-usage
-    dependencies:
-      - 10667615-e067-45b4-a925-563a79ea0949
-      - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+    - uuid: 10667615-e067-45b4-a925-563a79ea0949
+      directory: rulesets/00-discovery
+      checksum: 3a5cf5265128eddb8e007c9c76cfc1ab689a12c22920d7a16a62b2d8d2cfea4f
+    - uuid: 2eed70c0-305c-4061-bb92-d638ee834e47
+      directory: rulesets/azure
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 10e51d353291ae88bea0c4d2c72f99614be901be856827b047b5b270ffe7d3df
+    - uuid: e92057bc-5b66-4f7d-976f-f76aa3ad50e6
+      directory: rulesets/camel3
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: cbe5e20ba898be18064c8d94542c7ac63c31df87dfdfe599364cd07dd73e3ab3
+    - uuid: eb900f9e-6ff3-413d-9023-167765ce1311
+      directory: rulesets/droolsjbpm
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 215a7025560e890497eeeeb0a243c0d7a6618d4c1e475cb2ba6879db92a0d027
+    - uuid: 17b03c9f-ba19-4680-a3c2-ca159c5d74f0
+      directory: rulesets/eap6
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 0d36617b9accc3af5ef8bcf0a0e781c490a81f3152bd220604a99d1772a16355
+    - uuid: 1a523b92-1fb3-422b-aaf7-35f43a259fb9
+      directory: rulesets/eap7
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 38b256383c29c9287f3c0c69fc1718a743398b6407080949792740563cb9823e
+    - uuid: 3c471738-dfcf-46e8-b803-df07c304acc7
+      directory: rulesets/eap8
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: fadf66540c8f4bf79364a4611775a800019aa4e27d83dfbcc39e7aedb12b19fe
+    - uuid: 288037b2-279f-4d11-9ea9-f91ff274447f
+      directory: rulesets/eapxp
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 32a9331aebb701eecabe200c52b7b871cdc5da7588da8f2f3b730d544d98f0a0
+    - uuid: d51b30c0-a0a1-49ff-a0bb-861c43343c6b
+      directory: rulesets/filemappings
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 60f35e2c23fdd245cd51cc8f20491cfe142ca45524caebd8f7c2b1cedbd873c9
+    - uuid: 66bfcc38-3816-4d87-8d10-f8374af73c34
+      directory: rulesets/fuse
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 0945b6db3d28436e017bd86e06e13b715eedbdde67c2d39143605e5ab358d2f7
+    - uuid: 416ffaad-3d9b-4808-953e-623d9f2d7314
+      directory: rulesets/fuse-service-works
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: e15e50d789afe8d37a69c43c2b38eadb17f26c51059a0614e4a80b24dd7a617c
+    - uuid: e4db9c96-103c-409b-a347-098e7a04f172
+      directory: rulesets/hibernate
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 7aee82d5fc5372971cf2efc86da075099bce67f757384aa9609765efa006a46a
+    - uuid: e461ca80-60d1-4083-a298-f1983b5c9b24
+      directory: rulesets/jakarta-ee9
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 34af45cc8d645a032146c2730ae6cb22b3ed973091126742e0746431b146bf74
+    - uuid: 72b74cb6-dba7-452d-93a3-1a26855051e0
+      directory: rulesets/openjdk7
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 8d077839d065940d8d2fb2c0202e79344345dd720d30bc09e21d71ad8679b9cc
+    - uuid: e83339db-4dd8-4b06-bb31-6dfcb29c964a
+      directory: rulesets/openjdk11
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: a729827dd4a424c1c542de4a709694222dc0b50438df9f144354bfa27df5b6d1
+    - uuid: c73c3986-64a5-4c2e-8149-fba57347af99
+      directory: rulesets/openjdk17
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: be9c1a4bae5fbd2e049517e93b9b74d85cb5784fffeb521699797ec4313fb63e
+    - uuid: 53ba6b0f-ad48-4211-9673-a2065c2a4b4d
+      directory: rulesets/openliberty
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: d8d20b6c9142a5719866145f54fd65c699e68edfc666af508a345cfb1ed23c86
+    - uuid: cf7aa432-5881-43dc-bdbc-a522ebd24299
+      directory: rulesets/openshift
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 75ed40f43adcece037698d467a50321eb91d37c68fb2da22b666512fa6bb69c6
+    - uuid: feb6648e-dd3c-4536-bf99-e40ee124653d
+      directory: rulesets/os
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 7134fa5d2ca1f35f4b1023d000d99b576a32773af99496fee7676eed954f061a
+    - uuid: 23f92444-0366-47c8-abc2-f67e6bcd95f2
+      directory: rulesets/quarkus
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: adc32c03b467ce21f4c6a3d9e801209ea7a5388054c244b16c28e90d43354b43
+    - uuid: 9179982c-6007-4e40-b67c-9a7272e44e87
+      directory: rulesets/rhr
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: e9cdb39bdf8e5149009007ae5a5bc31817824865d349e36a9c81c9cbd8a23d7d
+    - uuid: 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      directory: rulesets/technology-usage
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: b5f1bec2d4c88278659ada4995cf59328fc56b5cef522402a19908803d632f35
