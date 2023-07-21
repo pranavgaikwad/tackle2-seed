@@ -128,7 +128,4 @@ items:
     - uuid: 1b2a0eef-511c-4c07-a36a-d301b15d8207
       name: ".technology-usage"
       directory: rulesets/technology-usage
-      dependencies:
-        - 10667615-e067-45b4-a925-563a79ea0949
-        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: b5f1bec2d4c88278659ada4995cf59328fc56b5cef522402a19908803d632f35
