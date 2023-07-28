@@ -28,8 +28,8 @@ func main() {
 	rulesetUUIDs := make(map[string]string)
 
 	// apply missing UUIDs
-	for i := range seeds {
-		seed := &seeds[i]
+	for idx := range seeds {
+		seed := &seeds[idx]
 		switch strings.ToLower(seed.Kind) {
 		case pkg.KindJobFunction:
 			for i := range seed.Items {
@@ -48,7 +48,8 @@ func main() {
 				}
 			}
 		case pkg.KindTagCategory:
-			for _, item := range seed.Items {
+			for i := range seed.Items {
+				item := &seed.Items[i]
 				tc := pkg.TagCategory{}
 				err = item.Decode(&tc)
 				if err != nil {
@@ -88,6 +89,22 @@ func main() {
 				rs.Checksum = fmt.Sprintf("%x", checksum)
 
 				err = item.Encode(rs)
+				if err != nil {
+					panic(err)
+				}
+			}
+		case pkg.KindTarget:
+			for i := range seed.Items {
+				item := &seed.Items[i]
+				t := pkg.Target{}
+				err = item.Decode(&t)
+				if err != nil {
+					panic(err)
+				}
+				if t.UUID == "" {
+					t.UUID = uuid.NewString()
+				}
+				err = item.Encode(t)
 				if err != nil {
 					panic(err)
 				}
