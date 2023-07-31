@@ -61,11 +61,6 @@ func (r *RuleSet) Yaml() string {
 	return path.Join(r.SeedDir, r.Directory, RuleSetYaml)
 }
 
-// Image returns the path to the image.svg file.
-func (r *RuleSet) Image() string {
-	return path.Join(r.SeedDir, r.Directory, RuleSetImage)
-}
-
 // Load populates the seed representation with values
 // from the analyzer ruleset yaml.
 func (r *RuleSet) Load() (err error) {

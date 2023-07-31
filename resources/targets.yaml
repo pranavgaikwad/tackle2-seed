@@ -1,0 +1,82 @@
+kind: Target
+version: 8
+items:
+  - uuid: 72e4ac0a-619a-4c6e-acdc-b2ae6540ca56
+    name: Application server migration to
+    description: Upgrade to the latest Release of JBoss EAP or migrate your applications to JBoss EAP from other Enterprise Application Server (e.g. Oracle WebLogic Server).
+    imagepath: images/eap.svg
+    choice: true
+    labels:
+      - name: JBoss EAP 7
+        label: konveyor.io/target=eap7
+      - name: JBoss EAP 8
+        label: konveyor.io/target=eap8
+  - uuid: 9a14647c-0cdf-45e7-8399-84167500385a
+    name: Containerization
+    description: A comprehensive set of cloud and container readiness rules to assess applications for suitability for deployment on Kubernetes.
+    imagepath: images/cloud.svg
+    labels:
+      - name: Containerization
+        label: konveyor.io/target=cloud-readiness
+  - uuid: c038c915-a52c-4b45-a29d-d4494622ff72
+    name: Quarkus
+    description: Rules to support the migration of Spring Boot applications to Quarkus.
+    imagepath: images/migration.svg
+    labels:
+      - name: Quarkus
+        label: konveyor.io/target=quarkus
+  - uuid: 4f366cc9-a528-44f4-b0d0-5aa4a318c0d0
+    name: OpenJDK
+    description: Rules to support upgrading the version of OpenJDK. Migrate to OpenJDK 11 or OpenJDK 17.
+    imagepath: images/mug.svg
+    choice: true
+    labels:
+      - name: OpenJDK 11
+        label: konveyor.io/target=openjdk11
+      - name: OpenJDK 17
+        label: konveyor.io/target=openjdk17
+  - uuid: d0d79c05-b6ef-43ad-929a-7ddaecbb83df
+    name: Linux
+    description: Ensure there are no Microsoft Windows paths hard coded into your applications.
+    imagepath: images/server.svg
+    labels:
+      - name: Linux
+        label: konveyor.io/target=linux
+  - uuid: 865c6794-70e5-4133-8a20-6b6b0013ab2d
+    name: Jakarta EE 9
+    description: A collection of rules to support migrating applications from Java EE 8 to Jakarta EE 9. The rules cover project dependencies, package renaming, updated XML Schema namespaces, the renaming of application configuration properties, and bootstrapping files.
+    imagepath: images/migration.svg
+    labels:
+      - name: Jakarta
+        label: konveyor.io/target=jakarta-ee
+  - uuid: 7c1d9643-aef4-4c18-92a1-567c434707cc
+    name: Spring Boot on Red Hat Runtimes
+    description: A set of rules for assessing the compatibility of applications against the versions of Spring Boot libraries supported by Red Hat Runtimes.
+    imagepath: images/migration.svg
+    labels:
+      - name: Spring Boot
+        label: konveyor.io/target=rhr
+  - uuid: 21941d31-3e8a-46cc-9d3e-b678d4cdeff7
+    name: Open Liberty
+    description: A comprehensive set of rules for migrating traditional WebSphere applications to Open Liberty.
+    imagepath: images/migration.svg
+    labels:
+      - name: Open Liberty
+        label: konveyor.io/target=openliberty
+  - uuid: 809b0710-8bb2-4345-94c0-f8bb274ffc72
+    name: Camel
+    description: A comprehensive set of rules for migration from Apache Camel 2 to Apache Camel 3.
+    imagepath: images/multiply.svg
+    labels:
+      - name: Camel
+        label: konveyor.io/target=camel
+  - uuid: e66a777a-ad09-4db8-b7e9-7217a03b4b92
+    name: Azure
+    description: Upgrade your Java application so it can be deployed on Azure App Service.
+    imagepath: images/virt.svg
+    choice: true
+    labels:
+      - name: Azure App Service
+        label: konveyor.io/target=azure-appservice
+      - name: Azure Kubernetes Service
+        label: konveyor.io/target=azure-aks

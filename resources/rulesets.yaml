@@ -1,5 +1,5 @@
 kind: RuleSet
-version: 7
+version: 8
 items:
     - uuid: 10667615-e067-45b4-a925-563a79ea0949
       name: ".discovery"

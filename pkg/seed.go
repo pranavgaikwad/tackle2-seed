@@ -21,6 +21,7 @@ const (
 	KindJobFunction = "jobfunction"
 	KindRuleSet     = "ruleset"
 	KindTagCategory = "tagcategory"
+	KindTarget      = "target"
 )
 
 // Seed document structure.
@@ -59,6 +60,10 @@ func (r *Seed) DecodeItems() (decoded []interface{}, err error) {
 			if err != nil {
 				return
 			}
+			decoded = append(decoded, item)
+		case KindTarget:
+			item := Target{SeedDir: r.Dir()}
+			err = encoded.Decode(&item)
 			decoded = append(decoded, item)
 		case KindRuleSet:
 			item := RuleSet{SeedDir: r.Dir()}
