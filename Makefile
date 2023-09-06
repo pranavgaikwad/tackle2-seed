@@ -9,3 +9,6 @@ fmt:
 
 vet:
 	go vet ${PKG}
+
+prepare: cmd
+	bin/prepare resources resources
