@@ -427,6 +427,33 @@ func (r *Manifest) IsDep(ruleSet *pkg.RuleSet) (b bool) {
 	return
 }
 
+func (r *Manifest) PrintChanged() {
+	fmt.Printf(
+		"\n[Manifest] summary: (A)dded=%d,(M)odified=%d,(D)eleted=%d\n",
+		len(r.changed.added),
+		len(r.changed.updated),
+		len(r.changed.deleted))
+	for _, ruleSet := range r.changed.added {
+		fmt.Printf("  A (%s) %s\n", ruleSet.Name, ruleSet.Dir())
+	}
+	for _, ruleSet := range r.changed.updated {
+		fmt.Printf("  M (%s) %s\n", ruleSet.Name, ruleSet.Dir())
+	}
+	for _, ruleSet := range r.changed.deleted {
+		fmt.Printf("  D (%s) %s\n", ruleSet.Name, ruleSet.Dir())
+	}
+	fmt.Println("")
+}
+
+func (r *Manifest) Dirty() (b bool) {
+	n := 0
+	n += len(r.changed.added)
+	n += len(r.changed.updated)
+	n += len(r.changed.deleted)
+	b = n > 0
+	return
+}
+
 func (r *Manifest) find() (err error) {
 	entries, err := os.ReadDir(r.Root)
 	if err != nil {
@@ -459,33 +486,6 @@ func (r *Manifest) find() (err error) {
 		}
 	}
 	err = fmt.Errorf("manifest not found")
-	return
-}
-
-func (r *Manifest) PrintChanged() {
-	fmt.Printf(
-		"\n[Manifest] summary: (A)dded=%d,(M)odified=%d,(D)eleted=%d\n",
-		len(r.changed.added),
-		len(r.changed.updated),
-		len(r.changed.deleted))
-	for _, ruleSet := range r.changed.added {
-		fmt.Printf("  A (%s) %s\n", ruleSet.Name, ruleSet.Dir())
-	}
-	for _, ruleSet := range r.changed.updated {
-		fmt.Printf("  M (%s) %s\n", ruleSet.Name, ruleSet.Dir())
-	}
-	for _, ruleSet := range r.changed.deleted {
-		fmt.Printf("  D (%s) %s\n", ruleSet.Name, ruleSet.Dir())
-	}
-	fmt.Println("")
-}
-
-func (r *Manifest) Dirty() (b bool) {
-	n := 0
-	n += len(r.changed.added)
-	n += len(r.changed.updated)
-	n += len(r.changed.deleted)
-	b = n > 0
 	return
 }
 
