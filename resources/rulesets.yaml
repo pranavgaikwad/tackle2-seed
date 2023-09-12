@@ -1,3 +1,4 @@
+root: ./resources
 kind: RuleSet
 version: 8
 items:
@@ -6,12 +7,14 @@ items:
       directory: rulesets/00-discovery
       checksum: 20256043f7c2cc2b268fa2baf72b3ae4d82a3bd759cf2f8f2e91577a4534bf3d
     - uuid: 2eed70c0-305c-4061-bb92-d638ee834e47
+      name: azure/springboot
       directory: rulesets/azure
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: f42ba646e1a822ca20fc9a86faa35161c4907c0bea2f105fa4c5285b6f0e3b2b
     - uuid: e92057bc-5b66-4f7d-976f-f76aa3ad50e6
+      name: camel3/camel2
       directory: rulesets/camel3
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
@@ -24,18 +27,21 @@ items:
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: a8373c6b29ed2629523d1a135537819df90d73d04746ec141d291cdf42f1656f
     - uuid: 17b03c9f-ba19-4680-a3c2-ca159c5d74f0
+      name: eap6/resin
       directory: rulesets/eap6
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 4d0812535234c13b03a6d25e03f3a04a3561d2a34a882e348f31418b302f9be2
     - uuid: 1a523b92-1fb3-422b-aaf7-35f43a259fb9
+      name: eap7/websphere
       directory: rulesets/eap7
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 0cfa2820ec0631da62dd39c51d0cc52067fd8b5823d813a90983cb3a102e9c4d
     - uuid: 3c471738-dfcf-46e8-b803-df07c304acc7
+      name: eap8/eap7
       directory: rulesets/eap8
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
@@ -66,18 +72,14 @@ items:
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: a136c78603edf1fc77c3fb951d8633c92e502a48b8a992b8c85180f3fbedc4b4
     - uuid: e4db9c96-103c-409b-a347-098e7a04f172
+      name: hibernate
       directory: rulesets/hibernate
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 48555585fe4f96ff1d76d4966b5a7b3cd575b56818cbd7bd40c8da2d42976777
-    - uuid: e461ca80-60d1-4083-a298-f1983b5c9b24
-      directory: rulesets/jakarta-ee9
-      dependencies:
-        - 10667615-e067-45b4-a925-563a79ea0949
-        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 2e5d0990ba7d245825de17c0ac36037ca82e775e4ce7d78ed09d1bfb34270958
     - uuid: 72b74cb6-dba7-452d-93a3-1a26855051e0
+      name: openjdk7/oraclejdk7
       directory: rulesets/openjdk7
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
@@ -90,18 +92,21 @@ items:
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 7630d4dfc2ecda348761172076ba28e21d11bd769486b19e9828f6f2c9584fb3
     - uuid: c73c3986-64a5-4c2e-8149-fba57347af99
+      name: openjdk17/openjdk11
       directory: rulesets/openjdk17
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: be9c1a4bae5fbd2e049517e93b9b74d85cb5784fffeb521699797ec4313fb63e
     - uuid: 53ba6b0f-ad48-4211-9673-a2065c2a4b4d
+      name: openliberty/websphere
       directory: rulesets/openliberty
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 19432285d5b0ebdb16db3c5b31a725f3f515d9271ef992f5d99b2bc0cfb70e2f
     - uuid: cf7aa432-5881-43dc-bdbc-a522ebd24299
+      name: openshift
       directory: rulesets/openshift
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
@@ -114,12 +119,14 @@ items:
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: cbb89422e7725c4724334c5fcf5b719d9e5dfc451ad8396dc4c1faef41fabfd8
     - uuid: 23f92444-0366-47c8-abc2-f67e6bcd95f2
+      name: quarkus/springboot
       directory: rulesets/quarkus
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: d68cca5a34b8b5c7f04fadebc8c082e78a1d6b98b856d068c0775ec12d13c22b
     - uuid: 9179982c-6007-4e40-b67c-9a7272e44e87
+      name: rhr/springboot
       directory: rulesets/rhr
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
@@ -129,3 +136,9 @@ items:
       name: .technology-usage
       directory: rulesets/technology-usage
       checksum: 5d0074567118a63175a8e01195ea38fdeeaf8228258ecf2954b12e8baae212a9
+    - name: jeff
+      directory: rulesets/jeff
+      dependencies:
+        - '@rulesets/00-discovery'
+        - '@rulesets/technology-usage'
+      checksum: 6b931240c06840d9cdfcb121a1d29ed50c32ae272b4f84fdf4889fbc6d067803

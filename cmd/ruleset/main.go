@@ -223,7 +223,6 @@ type Manifest struct {
 	ruleSets []*pkg.RuleSet
 	dirMap   map[string]*pkg.RuleSet
 	changed  struct {
-		skipped map[string]*pkg.RuleSet
 		added   []*pkg.RuleSet
 		updated []*pkg.RuleSet
 		deleted []*pkg.RuleSet
@@ -296,15 +295,10 @@ func (r *Manifest) Build() (err error) {
 		ruleSet := &pkg.RuleSet{
 			Directory: path.Join(RuleSets, entry.Name()),
 		}
-		err = r.SetName(ruleSet)
+		err = r.SetDetails(ruleSet)
 		if err != nil {
 			return
 		}
-		err = r.SetDigest(ruleSet)
-		if err != nil {
-			return
-		}
-		r.SetDeps(ruleSet)
 		r.ruleSets = append(r.ruleSets, ruleSet)
 		r.dirMap[ruleSet.Dir()] = ruleSet
 	}
@@ -312,12 +306,7 @@ func (r *Manifest) Build() (err error) {
 }
 
 func (r *Manifest) Reconcile(other Manifest) {
-	r.changed.skipped = make(map[string]*pkg.RuleSet)
 	for _, ruleSet := range other.ruleSets {
-		if r.IsDep(ruleSet) {
-			r.changed.skipped[ruleSet.Dir()] = ruleSet
-			continue
-		}
 		matched, found := r.dirMap[ruleSet.Dir()]
 		if !found {
 			b := Ask("RuleSet at: %s unknown. Add?", ruleSet.Dir())
@@ -340,10 +329,6 @@ func (r *Manifest) Reconcile(other Manifest) {
 		}
 	}
 	for _, ruleSet := range r.ruleSets {
-		if r.IsDep(ruleSet) {
-			r.changed.skipped[ruleSet.Dir()] = ruleSet
-			continue
-		}
 		if _, found := other.dirMap[ruleSet.Dir()]; !found {
 			b := Ask(
 				"RuleSet at: %s not-found. Delete?",
@@ -367,6 +352,10 @@ func (r *Manifest) Add(ruleSet *pkg.RuleSet) {
 func (r *Manifest) Update(ruleSet *pkg.RuleSet) {
 	for i := range r.ruleSets {
 		if r.ruleSets[i].Dir() == ruleSet.Dir() {
+			r.ruleSets[i].Description = ruleSet.Description
+			if r.IsDep(ruleSet) {
+				continue
+			}
 			r.ruleSets[i].Name = ruleSet.Name
 			break
 		}
@@ -385,10 +374,11 @@ func (r *Manifest) Delete(ruleSet *pkg.RuleSet) {
 	r.ruleSets = wanted
 }
 
-func (r *Manifest) SetName(ruleSet *pkg.RuleSet) (err error) {
+func (r *Manifest) SetDetails(ruleSet *pkg.RuleSet) (err error) {
 	p := path.Join(r.Root, ruleSet.Dir(), "ruleset.yaml")
 	object := struct {
-		Name string
+		Name        string
+		Description string
 	}{}
 	f, err := os.Open(p)
 	if err != nil {
@@ -410,6 +400,9 @@ func (r *Manifest) SetName(ruleSet *pkg.RuleSet) (err error) {
 		return
 	}
 	ruleSet.Name = object.Name
+	ruleSet.Description = object.Description
+	r.SetDeps(ruleSet)
+	err = r.SetDigest(ruleSet)
 	return
 }
 
@@ -442,14 +435,10 @@ func (r *Manifest) IsDep(ruleSet *pkg.RuleSet) (b bool) {
 
 func (r *Manifest) PrintChanged() {
 	fmt.Printf(
-		"\n[Manifest] summary: (S)kipped=%d,(A)dded=%d,(M)odified=%d,(D)eleted=%d\n",
-		len(r.changed.skipped),
+		"\n[Manifest] summary: (A)dded=%d,(M)odified=%d,(D)eleted=%d\n",
 		len(r.changed.added),
 		len(r.changed.updated),
 		len(r.changed.deleted))
-	for _, ruleSet := range r.changed.skipped {
-		fmt.Printf("  S (%s) %s\n", ruleSet.Name, ruleSet.Dir())
-	}
 	for _, ruleSet := range r.changed.added {
 		fmt.Printf("  A (%s) %s\n", ruleSet.Name, ruleSet.Dir())
 	}
