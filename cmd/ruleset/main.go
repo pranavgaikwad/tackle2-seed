@@ -3,10 +3,12 @@ package main
 import (
 	"bufio"
 	"encoding/hex"
+	"errors"
 	"fmt"
 	"github.com/konveyor/tackle2-seed/pkg"
 	"github.com/pborman/getopt/v2"
 	"gopkg.in/yaml.v3"
+	"io"
 	"io/ioutil"
 	"os"
 	"os/exec"
@@ -218,8 +220,9 @@ func (r *Remote) Load() (err error) {
 }
 
 type Manifest struct {
-	Root     string
 	pkg.Seed `yaml:",inline"`
+	Root     string
+	path     string
 	ruleSets []*pkg.RuleSet
 	dirMap   map[string]*pkg.RuleSet
 	changed  struct {
@@ -231,20 +234,11 @@ type Manifest struct {
 
 func (r *Manifest) Load() (err error) {
 	r.dirMap = make(map[string]*pkg.RuleSet)
-	p := path.Join(r.Root, "rulesets.yaml")
-	fmt.Printf("[Manifest] Read: %s\n", p)
-	f, err := os.Open(p)
+	err = r.find()
 	if err != nil {
 		return
 	}
-	defer func() {
-		_ = f.Close()
-	}()
-	d := yaml.NewDecoder(f)
-	err = d.Decode(r)
-	if err != nil {
-		return
-	}
+	fmt.Printf("[Manifest] Read: %s\n", r.path)
 	for _, node := range r.Items {
 		ruleSet := &pkg.RuleSet{}
 		err = node.Decode(ruleSet)
@@ -258,8 +252,7 @@ func (r *Manifest) Load() (err error) {
 	return
 }
 func (r *Manifest) Write() (err error) {
-	p := path.Join(r.Root, "rulesets.yaml")
-	fmt.Printf("[Manifest] Write: %s\n", p)
+	fmt.Printf("[Manifest] Write: %s\n", r.path)
 	r.Items = []yaml.Node{}
 	for _, ruleSet := range r.ruleSets {
 		node := yaml.Node{}
@@ -269,7 +262,7 @@ func (r *Manifest) Write() (err error) {
 		}
 		r.Items = append(r.Items, node)
 	}
-	f, err := os.Create(p)
+	f, err := os.Create(r.path)
 	if err != nil {
 		return
 	}
@@ -431,6 +424,41 @@ func (r *Manifest) IsDep(ruleSet *pkg.RuleSet) (b bool) {
 			break
 		}
 	}
+	return
+}
+
+func (r *Manifest) find() (err error) {
+	entries, err := os.ReadDir(r.Root)
+	if err != nil {
+		return
+	}
+	var f *os.File
+	defer func() {
+		_ = f.Close()
+	}()
+	for _, entry := range entries {
+		if entry.IsDir() {
+			continue
+		}
+		r.path = path.Join(r.Root, entry.Name())
+		f, err = os.Open(r.path)
+		if err != nil {
+			return
+		}
+		d := yaml.NewDecoder(f)
+		err = d.Decode(r)
+		_ = f.Close()
+		if err != nil {
+			if errors.Is(err, io.EOF) {
+				continue
+			}
+			return
+		}
+		if strings.ToLower(r.Kind) == pkg.KindRuleSet {
+			return
+		}
+	}
+	err = fmt.Errorf("manifest not found")
 	return
 }
 
