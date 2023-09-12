@@ -125,7 +125,7 @@ func (r *Cmd) Reconcile() (err error) {
 	if !r.Manifest.Current.Dirty() {
 		return
 	}
-	b := Ask("Apply approved changes?")
+	b := bash.Ask("Apply approved changes?")
 	if b {
 		err = r.Apply()
 		if err != nil {
@@ -194,7 +194,7 @@ type Remote struct {
 }
 
 func (r *Remote) Load() (err error) {
-	if strings.HasPrefix(r.URL, "/") {
+	if strings.HasPrefix(r.URL, "/") || strings.HasPrefix(r.URL, ".") {
 		r.Path = r.URL
 		return
 	}
@@ -306,10 +306,11 @@ func (r *Manifest) Build() (err error) {
 }
 
 func (r *Manifest) Reconcile(other Manifest) {
+	bash := Bash{}
 	for _, ruleSet := range other.ruleSets {
 		matched, found := r.dirMap[ruleSet.Dir()]
 		if !found {
-			b := Ask("RuleSet at: %s unknown. Add?", ruleSet.Dir())
+			b := bash.Ask("RuleSet at: %s unknown. Add?", ruleSet.Dir())
 			if b {
 				r.Add(ruleSet)
 				r.changed.added = append(
@@ -318,7 +319,7 @@ func (r *Manifest) Reconcile(other Manifest) {
 			}
 		} else {
 			if matched.Checksum != ruleSet.Checksum {
-				b := Ask("RuleSet at: %s changed. Update?", ruleSet.Dir())
+				b := bash.Ask("RuleSet at: %s changed. Update?", ruleSet.Dir())
 				if b {
 					r.Update(ruleSet)
 					r.changed.updated = append(
@@ -330,7 +331,7 @@ func (r *Manifest) Reconcile(other Manifest) {
 	}
 	for _, ruleSet := range r.ruleSets {
 		if _, found := other.dirMap[ruleSet.Dir()]; !found {
-			b := Ask(
+			b := bash.Ask(
 				"RuleSet at: %s not-found. Delete?",
 				ruleSet.Dir())
 			if b {
@@ -482,7 +483,7 @@ func (r *Bash) Run(args ...string) (err error) {
 	return
 }
 
-func Ask(prompt string, v ...any) (b bool) {
+func (r *Bash) Ask(prompt string, v ...any) (b bool) {
 	if YesAssumed {
 		b = true
 		return
