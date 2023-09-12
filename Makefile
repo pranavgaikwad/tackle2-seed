@@ -17,8 +17,10 @@ vet:
 	go vet ${PKG}
 
 run-prepare: prepare
-	bin/prepare resources resources
+	bin/prepare
 
 ruleset-patch: ruleset
-	bin/ruleset -p resources
-	bin/prepare resources resources
+	bin/prepare
+	bin/ruleset
+	bin/prepare
+
