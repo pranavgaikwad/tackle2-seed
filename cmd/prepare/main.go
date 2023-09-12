@@ -31,7 +31,7 @@ func main() {
 		getopt.Usage()
 		return
 	}
-	
+
 	inPath := *input
 	outPath := *output
 
