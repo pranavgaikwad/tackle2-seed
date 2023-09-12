@@ -55,7 +55,7 @@ func (r *Cmd) Main() (err error) {
 		"remote",
 		'r',
 		"https://github.com/konveyor/rulesets",
-		"The remote (ruleset) github repository URL. May be file path.")
+		"The remote (ruleset) github repository URL. May be plan file path.")
 	ref := getopt.StringLong(
 		"branch",
 		'b',
@@ -125,7 +125,7 @@ func (r *Cmd) Reconcile() (err error) {
 	if !r.Manifest.Current.Dirty() {
 		return
 	}
-	b := Ask("Apply?")
+	b := Ask("Apply approved changes?")
 	if b {
 		err = r.Apply()
 		if err != nil {
