@@ -4,21 +4,36 @@ import (
 	"fmt"
 	"github.com/google/uuid"
 	"github.com/konveyor/tackle2-seed/pkg"
+	"github.com/pborman/getopt/v2"
 	"gopkg.in/yaml.v3"
 	"os"
 	"path"
 	"strings"
-	"syscall"
 )
 
 func main() {
-	if len(os.Args) != 3 {
-		fmt.Printf("usage: %s <indir> <outdir>\n", os.Args[0])
-		syscall.Exit(1)
+	help := getopt.BoolLong(
+		"help",
+		'h',
+		"Show help.")
+	input := getopt.StringLong(
+		"input",
+		'i',
+		"./resources",
+		"The resources path (input).")
+	output := getopt.StringLong(
+		"output",
+		'o',
+		"./resources",
+		"The resources path (output).")
+	getopt.Parse()
+	if *help {
+		getopt.Usage()
+		return
 	}
 
-	inPath := os.Args[1]
-	outPath := os.Args[2]
+	inPath := *input
+	outPath := *output
 
 	seeds, _, err := pkg.ReadFromDir(inPath, pkg.AllVersions)
 	if err != nil {
