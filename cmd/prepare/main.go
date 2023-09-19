@@ -124,6 +124,22 @@ func main() {
 					panic(err)
 				}
 			}
+		case pkg.KindQuestionnaire:
+			for i := range seed.Items {
+				item := &seed.Items[i]
+				q := pkg.Target{}
+				err = item.Decode(&q)
+				if err != nil {
+					panic(err)
+				}
+				if q.UUID == "" {
+					q.UUID = uuid.NewString()
+				}
+				err = item.Encode(q)
+				if err != nil {
+					panic(err)
+				}
+			}
 		default:
 		}
 		seedsByFile[seed.Filename()] = append(seedsByFile[seed.Filename()], seed)

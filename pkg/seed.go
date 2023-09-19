@@ -18,10 +18,11 @@ const (
 
 // Seedable kinds
 const (
-	KindJobFunction = "jobfunction"
-	KindRuleSet     = "ruleset"
-	KindTagCategory = "tagcategory"
-	KindTarget      = "target"
+	KindJobFunction   = "jobfunction"
+	KindRuleSet       = "ruleset"
+	KindTagCategory   = "tagcategory"
+	KindTarget        = "target"
+	KindQuestionnaire = "questionnaire"
 )
 
 // Seed document structure.
@@ -64,6 +65,9 @@ func (r *Seed) DecodeItems() (decoded []interface{}, err error) {
 		case KindTarget:
 			item := Target{SeedDir: r.Dir()}
 			err = encoded.Decode(&item)
+			if err != nil {
+				return
+			}
 			decoded = append(decoded, item)
 		case KindRuleSet:
 			item := RuleSet{SeedDir: r.Dir()}
@@ -72,6 +76,13 @@ func (r *Seed) DecodeItems() (decoded []interface{}, err error) {
 				return
 			}
 			err = item.Load()
+			if err != nil {
+				return
+			}
+			decoded = append(decoded, item)
+		case KindQuestionnaire:
+			item := Questionnaire{}
+			err = encoded.Decode(&item)
 			if err != nil {
 				return
 			}
