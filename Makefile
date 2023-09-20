@@ -19,7 +19,7 @@ vet:
 run-prepare: prepare
 	bin/prepare
 
-ruleset-patch: ruleset
+ruleset-patch: cmd
 	bin/prepare
 	bin/ruleset
 	bin/prepare
