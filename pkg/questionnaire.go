@@ -4,11 +4,11 @@ package pkg
 type Questionnaire struct {
 	UUID         string
 	Name         string
-	Description  string
+	Description  string `yaml:",omitempty" json:",omitempty"`
 	Required     bool
 	Sections     []Section
 	Thresholds   Thresholds
-	RiskMessages RiskMessages
+	RiskMessages RiskMessages `yaml:",omitempty" json:",omitempty"`
 }
 
 // Section represents a group of questions in a questionnaire.
@@ -23,8 +23,8 @@ type Question struct {
 	Order       uint
 	Text        string
 	Explanation string
-	IncludeFor  []CategorizedTag
-	ExcludeFor  []CategorizedTag
+	IncludeFor  []CategorizedTag `yaml:",omitempty" json:",omitempty"`
+	ExcludeFor  []CategorizedTag `yaml:",omitempty" json:",omitempty"`
 	Answers     []Answer
 }
 
@@ -33,12 +33,12 @@ type Answer struct {
 	Order         uint
 	Text          string
 	Risk          string
-	Rationale     string
-	Mitigation    string
-	ApplyTags     []CategorizedTag
-	AutoAnswerFor []CategorizedTag
-	Selected      bool
-	AutoAnswered  bool
+	Rationale     string           `yaml:",omitempty" json:",omitempty"`
+	Mitigation    string           `yaml:",omitempty" json:",omitempty"`
+	ApplyTags     []CategorizedTag `yaml:",omitempty" json:",omitempty"`
+	AutoAnswerFor []CategorizedTag `yaml:",omitempty" json:",omitempty"`
+	Selected      bool             `yaml:",omitempty" json:",omitempty"`
+	AutoAnswered  bool             `yaml:",omitempty" json:",omitempty"`
 }
 
 // CategorizedTag represents a human-readable pair of category and tag.
