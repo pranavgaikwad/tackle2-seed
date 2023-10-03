@@ -127,7 +127,7 @@ func main() {
 		case pkg.KindQuestionnaire:
 			for i := range seed.Items {
 				item := &seed.Items[i]
-				q := pkg.Target{}
+				q := pkg.Questionnaire{}
 				err = item.Decode(&q)
 				if err != nil {
 					panic(err)
