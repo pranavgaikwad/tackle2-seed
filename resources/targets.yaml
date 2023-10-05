@@ -76,6 +76,7 @@ items:
       name: Camel
       description: A comprehensive set of rules for migration to Apache Camel 3 and 4.
       imagepath: images/multiply.svg
+      choice: true
       labels:
         - name: camel:3.0
           label: konveyor.io/target=camel3
