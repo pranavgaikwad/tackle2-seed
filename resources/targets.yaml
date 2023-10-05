@@ -74,7 +74,7 @@ items:
           label: konveyor.io/target=openliberty
     - uuid: 809b0710-8bb2-4345-94c0-f8bb274ffc72
       name: Camel
-      description: A comprehensive set of rules for migration to Apache Camel 3 and 4.
+      description: A comprehensive set of rules for migration from Apache Camel 2 to 3 and Camel 3 to 4.
       imagepath: images/multiply.svg
       choice: true
       labels:
