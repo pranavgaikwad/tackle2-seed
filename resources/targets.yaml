@@ -35,6 +35,8 @@ items:
           label: konveyor.io/target=openjdk11
         - name: OpenJDK 17
           label: konveyor.io/target=openjdk17
+        - name: OpenJDK 21
+          label: konveyor.io/target=openjdk21
     - uuid: d0d79c05-b6ef-43ad-929a-7ddaecbb83df
       name: Linux
       description: Ensure there are no Microsoft Windows paths hard coded into your applications.
