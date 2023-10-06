@@ -78,51 +78,9 @@ items:
       imagepath: images/multiply.svg
       choice: true
       labels:
-        - name: camel:3.0
+        - name: camel:3
           label: konveyor.io/target=camel3
-        - name: camel:3.1
-          label: konveyor.io/target=camel3
-        - name: camel:3.2
-          label: konveyor.io/target=camel3
-        - name: camel:3.3
-          label: konveyor.io/target=camel3
-        - name: camel:3.4
-          label: konveyor.io/target=camel3
-        - name: camel:3.5
-          label: konveyor.io/target=camel3
-        - name: camel:3.6
-          label: konveyor.io/target=camel3
-        - name: camel:3.7
-          label: konveyor.io/target=camel3
-        - name: camel:3.8
-          label: konveyor.io/target=camel3
-        - name: camel:3.9
-          label: konveyor.io/target=camel3
-        - name: camel:3.10
-          label: konveyor.io/target=camel3
-        - name: camel:3.11
-          label: konveyor.io/target=camel3
-        - name: camel:3.12
-          label: konveyor.io/target=camel3
-        - name: camel:3.13
-          label: konveyor.io/target=camel3
-        - name: camel:3.14
-          label: konveyor.io/target=camel3
-        - name: camel:3.15
-          label: konveyor.io/target=camel3
-        - name: camel:3.16
-          label: konveyor.io/target=camel3
-        - name: camel:3.17
-          label: konveyor.io/target=camel3
-        - name: camel:3.18
-          label: konveyor.io/target=camel3
-        - name: camel:3.19
-          label: konveyor.io/target=camel3
-        - name: camel:3.20
-          label: konveyor.io/target=camel3
-        - name: camel:3.21
-          label: konveyor.io/target=camel3
-        - name: camel:4.0
+        - name: camel:4
           label: konveyor.io/target=camel4
     - uuid: e66a777a-ad09-4db8-b7e9-7217a03b4b92
       name: Azure
