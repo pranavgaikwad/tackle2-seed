@@ -35,6 +35,8 @@ items:
           label: konveyor.io/target=openjdk11
         - name: OpenJDK 17
           label: konveyor.io/target=openjdk17
+        - name: OpenJDK 21
+          label: konveyor.io/target=openjdk21
     - uuid: d0d79c05-b6ef-43ad-929a-7ddaecbb83df
       name: Linux
       description: Ensure there are no Microsoft Windows paths hard coded into your applications.
@@ -56,6 +58,13 @@ items:
       labels:
         - name: Spring Boot
           label: konveyor.io/target=rhr
+    - uuid: b035a041-3ee5-417a-86f2-37e0b43ab5c5
+      name: JBoss Web Server 6
+      description: A collection of rules to support migrating from JWS 5 to JWS 6.
+      imagepath: images/eap.svg
+      labels:
+        - name: JWS 6
+          label: konveyor.io/target=jws6
     - uuid: 21941d31-3e8a-46cc-9d3e-b678d4cdeff7
       name: Open Liberty
       description: A comprehensive set of rules for migrating traditional WebSphere applications to Open Liberty.
@@ -65,11 +74,14 @@ items:
           label: konveyor.io/target=openliberty
     - uuid: 809b0710-8bb2-4345-94c0-f8bb274ffc72
       name: Camel
-      description: A comprehensive set of rules for migration from Apache Camel 2 to Apache Camel 3.
+      description: A comprehensive set of rules for migration from Apache Camel 2 to 3 and Camel 3 to 4.
       imagepath: images/multiply.svg
+      choice: true
       labels:
-        - name: Camel
-          label: konveyor.io/target=camel
+        - name: camel:3
+          label: konveyor.io/target=camel3
+        - name: camel:4
+          label: konveyor.io/target=camel4
     - uuid: e66a777a-ad09-4db8-b7e9-7217a03b4b92
       name: Azure
       description: Upgrade your Java application so it can be deployed on Azure App Service.
