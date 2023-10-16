@@ -4,7 +4,7 @@ items:
     - uuid: 10667615-e067-45b4-a925-563a79ea0949
       name: .discovery
       directory: rulesets/00-discovery
-      checksum: 273b48122e2af09fb786d4e3d2ba8ed6c96747d38bed8dff8ca645874652dff4
+      checksum: 7f8031f5d8ac76ab525e72be2cb53461acc1da38a32c7378d01fa1750d993ba7
     - uuid: 2eed70c0-305c-4061-bb92-d638ee834e47
       name: azure/springboot
       description: Identify Zipkin dependencies.
@@ -146,7 +146,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 1116ee2e24a4c7bb8ae10165a49e02e6075a916c3207e65b2e5834e8c05d7597
+      checksum: 96a6a867379616acae8498bee1ab28a97c89b02e5136c1e7dcbc6ffe5a9a8148
     - uuid: 9179982c-6007-4e40-b67c-9a7272e44e87
       name: rhr/springboot
       description: Verify the version of the Spring Boot framework is compatible with those supported by Red Hat Runtimes
