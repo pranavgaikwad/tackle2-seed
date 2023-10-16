@@ -15,7 +15,7 @@ import (
 
 type Manifest struct {
 	pkg.Seed `yaml:",inline"`
-	Root     string
+	root     string
 	path     string
 	ruleSets []*pkg.RuleSet
 	dirMap   map[string]*pkg.RuleSet
@@ -70,7 +70,7 @@ func (r *Manifest) Write() (err error) {
 
 func (r *Manifest) Build() (err error) {
 	r.dirMap = make(map[string]*pkg.RuleSet)
-	p := path.Join(r.Root, RuleSets)
+	p := path.Join(r.root, RuleSets)
 	entries, err := os.ReadDir(p)
 	if err != nil {
 		return
@@ -163,7 +163,7 @@ func (r *Manifest) Delete(ruleSet *pkg.RuleSet) {
 }
 
 func (r *Manifest) SetDetails(ruleSet *pkg.RuleSet) (err error) {
-	p := path.Join(r.Root, ruleSet.Dir(), "ruleset.yaml")
+	p := path.Join(r.root, ruleSet.Dir(), "ruleset.yaml")
 	object := struct {
 		Name        string
 		Description string
@@ -195,7 +195,7 @@ func (r *Manifest) SetDetails(ruleSet *pkg.RuleSet) (err error) {
 }
 
 func (r *Manifest) SetDigest(ruleSet *pkg.RuleSet) (err error) {
-	p := path.Join(r.Root, ruleSet.Dir())
+	p := path.Join(r.root, ruleSet.Dir())
 	b, err := pkg.ChecksumDir(p)
 	if err == nil {
 		ruleSet.Checksum = hex.EncodeToString(b)
@@ -249,7 +249,7 @@ func (r *Manifest) Dirty() (b bool) {
 }
 
 func (r *Manifest) find() (err error) {
-	entries, err := os.ReadDir(r.Root)
+	entries, err := os.ReadDir(r.root)
 	if err != nil {
 		return
 	}
@@ -261,7 +261,7 @@ func (r *Manifest) find() (err error) {
 		if entry.IsDir() {
 			continue
 		}
-		r.path = path.Join(r.Root, entry.Name())
+		r.path = path.Join(r.root, entry.Name())
 		f, err = os.Open(r.path)
 		if err != nil {
 			return
