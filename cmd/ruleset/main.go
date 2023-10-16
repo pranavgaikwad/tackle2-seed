@@ -75,7 +75,7 @@ func (r *Cmd) Main() (err error) {
 	r.Path = *resources
 	r.Remote.URL = *remote
 	r.Remote.Ref = *ref
-	r.Manifest.Current.Root = *resources
+	r.Manifest.Current.root = *resources
 
 	fmt.Printf("\nResources: %s\n", *resources)
 	fmt.Printf("Remote: %s\n", *remote)
@@ -110,7 +110,7 @@ func (r *Cmd) Reconcile() (err error) {
 	if err != nil {
 		return
 	}
-	r.Manifest.Remote.Root = tmpDir
+	r.Manifest.Remote.root = tmpDir
 	err = r.Manifest.Remote.Build()
 	if err != nil {
 		return
@@ -165,7 +165,7 @@ func (r *Cmd) Apply() (err error) {
 
 func (r *Cmd) ReplaceDir(ruleSet *pkg.RuleSet) (err error) {
 	bash := Bash{Silent: true}
-	remote := path.Join(r.Manifest.Remote.Root, ruleSet.Dir())
+	remote := path.Join(r.Manifest.Remote.root, ruleSet.Dir())
 	current := path.Join(r.Path, ruleSet.Dir())
 	err = bash.Run("rm -rf", current)
 	if err != nil {
