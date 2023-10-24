@@ -37,7 +37,8 @@ items:
           label: konveyor.io/target=openjdk17
         - name: OpenJDK 21
           label: konveyor.io/target=openjdk21
-    - name: OracleJDK to OpenJDK
+    - uuid: 8c4daa66-cdbc-4cd6-894c-f117f25ea6c6
+      name: OracleJDK to OpenJDK
       description: Rules to support migration to OpenJDK from OracleJDK.
       imagepath: images/mug.svg
       labels:
