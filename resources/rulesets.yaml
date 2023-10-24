@@ -12,7 +12,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: a70bc2c01f9f4b3043e1d517d8e924400c697bf27266ee1de16379cbc35c3359
+      checksum: beee48f5210601ff3ff6cc6310a3b448a38554d2b4c51dcd6bfe7b1706647763
     - uuid: e92057bc-5b66-4f7d-976f-f76aa3ad50e6
       name: camel3/camel2
       description: This ruleset provides analysis with respect to the missing dependencies in Apache Camel 3 due to Java 11 adoption.
@@ -123,14 +123,6 @@ items:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 1bb8a3d1f767d9e94ca5339ab92f072e1d06648090355ed17ca231e66ac5b70c
-    - uuid: cf7aa432-5881-43dc-bdbc-a522ebd24299
-      name: openshift
-      description: This ruleset detects the Java Mail API, which may be problematic when migrating an application to a cloud environment.
-      directory: rulesets/openshift
-      dependencies:
-        - 10667615-e067-45b4-a925-563a79ea0949
-        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: b0e8ac46ecf8060374020f7a108e4a9bdb8a102f5857cc5a5c89781ff50debb2
     - uuid: feb6648e-dd3c-4536-bf99-e40ee124653d
       name: os/windows
       description: This is a ruleset for Windows operating system specific rules while migrating to Linux operating system.
@@ -184,3 +176,11 @@ items:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 3668a741fc5025557a192b7ab5712237a718aefac99c19248d62fb88151c0c5c
+    - uuid: e981e01a-5722-4df0-bf01-9e0694e7bb05
+      name: openshift
+      description: This ruleset detects the Java Mail API, which may be problematic when migrating an application to a cloud environment.
+      directory: rulesets/cloud-readiness
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 3d2d0dc81bb63b4f65ef11d84836c1c64ba5c8d0a69b6c52447a7e5412917742
