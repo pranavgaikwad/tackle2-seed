@@ -4,6 +4,7 @@ items:
     - uuid: 72e4ac0a-619a-4c6e-acdc-b2ae6540ca56
       name: Application server migration to
       description: Upgrade to the latest Release of JBoss EAP or migrate your applications to JBoss EAP from other Enterprise Application Server (e.g. Oracle WebLogic Server).
+      provider: Java
       imagepath: images/eap.svg
       choice: true
       labels:
@@ -14,6 +15,7 @@ items:
     - uuid: 9a14647c-0cdf-45e7-8399-84167500385a
       name: Containerization
       description: A comprehensive set of cloud and container readiness rules to assess applications for suitability for deployment on Kubernetes.
+      provider: Java
       imagepath: images/cloud.svg
       labels:
         - name: Containerization
@@ -21,6 +23,7 @@ items:
     - uuid: c038c915-a52c-4b45-a29d-d4494622ff72
       name: Quarkus
       description: Rules to support the migration of Spring Boot applications to Quarkus.
+      provider: Java
       imagepath: images/migration.svg
       labels:
         - name: Quarkus
@@ -28,6 +31,7 @@ items:
     - uuid: 4f366cc9-a528-44f4-b0d0-5aa4a318c0d0
       name: OpenJDK
       description: Rules to support upgrading the version of OpenJDK. Migrate to OpenJDK 11 or OpenJDK 17.
+      provider: Java
       imagepath: images/mug.svg
       choice: true
       labels:
@@ -40,6 +44,7 @@ items:
     - uuid: 8c4daa66-cdbc-4cd6-894c-f117f25ea6c6
       name: OracleJDK to OpenJDK
       description: Rules to support migration to OpenJDK from OracleJDK.
+      provider: Java
       imagepath: images/mug.svg
       labels:
         - name: OpenJDK 7
@@ -47,6 +52,7 @@ items:
     - uuid: d0d79c05-b6ef-43ad-929a-7ddaecbb83df
       name: Linux
       description: Ensure there are no Microsoft Windows paths hard coded into your applications.
+      provider: Java
       imagepath: images/server.svg
       labels:
         - name: Linux
@@ -54,6 +60,7 @@ items:
     - uuid: 865c6794-70e5-4133-8a20-6b6b0013ab2d
       name: Jakarta EE 9
       description: A collection of rules to support migrating applications from Java EE 8 to Jakarta EE 9. The rules cover project dependencies, package renaming, updated XML Schema namespaces, the renaming of application configuration properties, and bootstrapping files.
+      provider: Java
       imagepath: images/migration.svg
       labels:
         - name: Jakarta
@@ -61,6 +68,7 @@ items:
     - uuid: 7c1d9643-aef4-4c18-92a1-567c434707cc
       name: Spring Boot on Red Hat Runtimes
       description: A set of rules for assessing the compatibility of applications against the versions of Spring Boot libraries supported by Red Hat Runtimes.
+      provider: Java
       imagepath: images/migration.svg
       labels:
         - name: Spring Boot
@@ -68,6 +76,7 @@ items:
     - uuid: b035a041-3ee5-417a-86f2-37e0b43ab5c5
       name: JBoss Web Server 6
       description: A collection of rules to support migrating from JWS 5 to JWS 6.
+      provider: Java
       imagepath: images/eap.svg
       labels:
         - name: JWS 6
@@ -75,6 +84,7 @@ items:
     - uuid: 21941d31-3e8a-46cc-9d3e-b678d4cdeff7
       name: Open Liberty
       description: A comprehensive set of rules for migrating traditional WebSphere applications to Open Liberty.
+      provider: Java
       imagepath: images/migration.svg
       labels:
         - name: Open Liberty
@@ -82,6 +92,7 @@ items:
     - uuid: 809b0710-8bb2-4345-94c0-f8bb274ffc72
       name: Camel
       description: A comprehensive set of rules for migration from Apache Camel 2 to 3 and Camel 3 to 4.
+      provider: Java
       imagepath: images/multiply.svg
       choice: true
       labels:
@@ -92,6 +103,7 @@ items:
     - uuid: e66a777a-ad09-4db8-b7e9-7217a03b4b92
       name: Azure
       description: Upgrade your Java application so it can be deployed on Azure App Service.
+      provider: Java
       imagepath: images/virt.svg
       choice: true
       labels:

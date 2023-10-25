@@ -6,6 +6,7 @@ type Target struct {
 	UUID        string        `yaml:",omitempty"`
 	Name        string        `yaml:",omitempty"`
 	Description string        `yaml:",omitempty"`
+	Provider    string        `yaml:"provider"`
 	ImagePath   string        `yaml:",omitempty"`
 	Choice      bool          `yaml:",omitempty"`
 	Labels      []TargetLabel `yaml:",omitempty"`
