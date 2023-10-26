@@ -47,8 +47,8 @@ items:
       provider: Java
       imagepath: images/mug.svg
       labels:
-        - name: OpenJDK 7
-          label: konveyor.io/target=openjdk7
+        - name: OpenJDK
+          label: konveyor.io/target=openjdk
     - uuid: d0d79c05-b6ef-43ad-929a-7ddaecbb83df
       name: Linux
       description: Ensure there are no Microsoft Windows paths hard coded into your applications.

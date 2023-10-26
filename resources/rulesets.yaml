@@ -98,7 +98,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 1f85b905069cf2453d6551b379dcb8c98da5d3950602a198a98b3583a5d959e9
+      checksum: 03909c3421ad5ee2d11f3a1885de1d15d098b9b7eaea0b45b732089e5a70b32a
     - uuid: e83339db-4dd8-4b06-bb31-6dfcb29c964a
       name: openjdk11/openjdk8
       description: This ruleset provides analysis with respect to API removals between OpenJDK 8 and 11.
@@ -106,7 +106,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: fe663ac7c8e6016ecfc1318841b9fad8ab60f99e6f7b298a10d9703d00aed55b
+      checksum: 592d86249b23e61762bc0f9a1ec6916050d99e9300661d72705b9c68966fa404
     - uuid: c73c3986-64a5-4c2e-8149-fba57347af99
       name: openjdk17/openjdk11
       description: This ruleset provides analysis Security Manager classes and methods deprecated between OpenJDK 11 to 17.
@@ -114,7 +114,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: ec53c6db5b643f67f024f48535d826dcdcf9df898b07537b08080ef070a9b8da
+      checksum: 5019b448b71eb667ce34dbed1af234099b9a90c032e95d5573fb79806221495c
     - uuid: 53ba6b0f-ad48-4211-9673-a2065c2a4b4d
       name: openliberty/websphere
       description: This ruleset identifies usage of WebSphere APIs and technologies which are not provided by Open Liberty.
@@ -175,7 +175,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 3668a741fc5025557a192b7ab5712237a718aefac99c19248d62fb88151c0c5c
+      checksum: 52a6943630f33b94378de4d5ddc7d9a6ab4212c1b9a6872a9cd52f9b2fde3cdf
     - uuid: e981e01a-5722-4df0-bf01-9e0694e7bb05
       name: openshift
       description: This ruleset detects the Java Mail API, which may be problematic when migrating an application to a cloud environment.
