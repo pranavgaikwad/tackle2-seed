@@ -30,7 +30,7 @@ items:
           label: konveyor.io/target=quarkus
     - uuid: 4f366cc9-a528-44f4-b0d0-5aa4a318c0d0
       name: OpenJDK
-      description: Rules to support upgrading the version of OpenJDK. Migrate to OpenJDK 11 or OpenJDK 17.
+      description: Rules to support upgrading the version of OpenJDK. Migrate to OpenJDK 11, OpenJDK 17 or OpenJDK 21.
       provider: Java
       imagepath: images/mug.svg
       choice: true
