@@ -7,20 +7,20 @@ items:
       checksum: 7f8031f5d8ac76ab525e72be2cb53461acc1da38a32c7378d01fa1750d993ba7
     - uuid: 2eed70c0-305c-4061-bb92-d638ee834e47
       name: azure/springboot
-      description: Identify Zipkin dependencies.
+      description: Recommend OpenFeign instead of Feign.
       directory: rulesets/azure
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: beee48f5210601ff3ff6cc6310a3b448a38554d2b4c51dcd6bfe7b1706647763
+      checksum: 8a3e10a89514a01f82594db569fa8a72225712c1da85b75f3cfbce56144b89fc
     - uuid: e92057bc-5b66-4f7d-976f-f76aa3ad50e6
       name: camel3/camel2
-      description: This ruleset provides analysis with respect to the missing dependencies in Apache Camel 3 due to Java 11 adoption.
+      description: Rules for changes in XML file (e.g. pom.xml) to run on Apache Camel 3
       directory: rulesets/camel3
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: c69fd63ada6d14aa81c5a65314478dcb919e1ec6c9e64a239f5c01a401fda9f6
+      checksum: 8b74d52eb49611a46848a09ecd1eaafd4c23690b451681e072b4001d489414ef
     - uuid: eb900f9e-6ff3-413d-9023-167765ce1311
       name: droolsjbpm
       description: This ruleset provides help for migrating to a unified KIE (Knowledge Is Everything) API in the upgrade from version 5 to 6.
@@ -28,31 +28,30 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 2f0462ae1799ff4bfe94759ac2604671182e272fa98343588c295d15e284e4ce
+      checksum: 5828c052705f6da6ba2a4edef2608332f1c61f6259c78d30896942dbc59bedf7
     - uuid: 17b03c9f-ba19-4680-a3c2-ca159c5d74f0
-      name: eap6/resin
-      description: This ruleset provides analysis of Resin proprietary xml files that may require individual attention when migrating to JBoss EAP 6+.
+      name: eap6/java-ee/seam
+      description: This ruleset provides generic migration knowledge from the Seam 2 UI controls to pure JSF 2 UI Controls
       directory: rulesets/eap6
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: f75aa5c21a635fcb1139313c33a340186fb3a7267837f44e52ebc8d37a7f376b
+      checksum: a6f85e5464a8865755126dc838b38c17c2646db81e296d520a63188dd3f68da9
     - uuid: 1a523b92-1fb3-422b-aaf7-35f43a259fb9
-      name: eap7/websphere
-      description: Provides analysis of WebSphere proprietary classes and constructs that may require individual attention when migrating to JBoss EAP 7+.
+      name: eap7/weblogic/tests/data
       directory: rulesets/eap7
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: db2729a4ae41add0cde3cb973b1a34563c9331c8707f21706002402f081c170b
+      checksum: d0b4e872c404de3c6709c7416a898c71c52796c25a26259345118b907416d6af
     - uuid: 3c471738-dfcf-46e8-b803-df07c304acc7
       name: eap8/eap7
-      description: This ruleset provides rules to support the migration to hibernate search 6.0. Developed under WINDUPRULE-900
+      description: This ruleset provides analysis of Java EE applications that need to change certain CDI-related method calls.
       directory: rulesets/eap8
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 24842bd895e3cacd3c0f18ccb9f9665e5d036ebcc441c16b68e6df4606e22be9
+      checksum: 82b9db8a9d4551122dc2354fe0653c4b97bdeabba90185d0a6d3245ae4da4f4c
     - uuid: 288037b2-279f-4d11-9ea9-f91ff274447f
       name: eapxp/thorntail
       description: This ruleset provides analysis of Maven built applications that use Thorntail Maven Plugin, which should be replaced by JBoss EAP XP Bootable JAR Maven Plugin, when migrating to JBoss EAP XP.
@@ -60,7 +59,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 1d5f8bed0840796d24e0ae8ae260e3f5c1ac6b121c6482aff5959b1a931fa1ad
+      checksum: 4e563a5c5c7af2fa433baf23a604ef7f9eaca5dbb765a9c778f776cff9a29015
     - uuid: d51b30c0-a0a1-49ff-a0bb-861c43343c6b
       directory: rulesets/filemappings
       dependencies:
@@ -68,13 +67,13 @@ items:
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 5cfac56c29d7b5b88bb17dd5f773b8a175f55a689fb2893814f72ec9b8c630b5
     - uuid: 66bfcc38-3816-4d87-8d10-f8374af73c34
-      name: fuse
-      description: This ruleset provides analysis that may require individual attention when migrating from Sonic classes.
+      name: fuse/sonicesb
+      description: This ruleset contains rules that assist in migrating from Sonic ESB to Apache Camel.
       directory: rulesets/fuse
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 051b1e248f9df7f24a61ca6dff54692a07c377d7598588fb39955421c3dbf098
+      checksum: de8f47b185c24fc1e579d964c9b20f7e3f5ed5c4cf3d5fc52cf28f74aaefb43d
     - uuid: 416ffaad-3d9b-4808-953e-623d9f2d7314
       name: fuse-service-works/soa-p-5
       description: This ruleset provides analysis of JBoss SOA Platform 5 applications and provides information on how to migrate these to Red Hat JBoss Fuse Service Works
@@ -82,15 +81,15 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 86322e70c9c839ff6d819913901ded5a77c18c31ca673ad0a8336e7c38d6cf6c
+      checksum: 00cd397c912f0e2dadbf21c8f6f57b3c669a15d7faca79de5eb0a136ab8fe194
     - uuid: e4db9c96-103c-409b-a347-098e7a04f172
       name: hibernate
-      description: This ruleset provides analysis that may require individual attention when migrating to newer Hibernate java constructs.
+      description: This ruleset provides analysis of deprecated Hibernate java constructs and their migration to newer one.
       directory: rulesets/hibernate
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 302a683945a2abf22ebc81eb370ab75305fcd68396903f93f7616b192728b298
+      checksum: fc23d34442b886ac5f030a6b107d6de7ef5f58e78903c7f27fa66df43bbfc0d6
     - uuid: 72b74cb6-dba7-452d-93a3-1a26855051e0
       name: openjdk7/oraclejdk7
       description: This ruleset provides analysis with respect to the migration from OracleJDK to OpenJDK.
@@ -98,7 +97,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 03909c3421ad5ee2d11f3a1885de1d15d098b9b7eaea0b45b732089e5a70b32a
+      checksum: 68ebb6732e131062e924afd1af8c4be123ee56fef33d47ef0bfbc4fae98dc3e4
     - uuid: e83339db-4dd8-4b06-bb31-6dfcb29c964a
       name: openjdk11/openjdk8
       description: This ruleset provides analysis with respect to API removals between OpenJDK 8 and 11.
@@ -106,7 +105,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 592d86249b23e61762bc0f9a1ec6916050d99e9300661d72705b9c68966fa404
+      checksum: 9abee3d02dd50c303fff3ef488be9217e87533276d0598fa6b8fccd5d02d438c
     - uuid: c73c3986-64a5-4c2e-8149-fba57347af99
       name: openjdk17/openjdk11
       description: This ruleset provides analysis Security Manager classes and methods deprecated between OpenJDK 11 to 17.
@@ -114,15 +113,15 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 5019b448b71eb667ce34dbed1af234099b9a90c032e95d5573fb79806221495c
+      checksum: 802a77dde1430aa1afddf3dc8f8b5b593afa757d53d1426b0d2e1ab08087abe3
     - uuid: 53ba6b0f-ad48-4211-9673-a2065c2a4b4d
       name: openliberty/websphere
-      description: This ruleset identifies usage of WebSphere APIs and technologies which are not provided by Open Liberty.
+      description: This ruleset identifies usage of Java APIs and technologies which are not provided by Open Liberty.
       directory: rulesets/openliberty
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 1bb8a3d1f767d9e94ca5339ab92f072e1d06648090355ed17ca231e66ac5b70c
+      checksum: 24bfdbe5de5ad40e4082cc229026b80045c60e48ebcad17ee0115011849047ed
     - uuid: feb6648e-dd3c-4536-bf99-e40ee124653d
       name: os/windows
       description: This is a ruleset for Windows operating system specific rules while migrating to Linux operating system.
@@ -130,15 +129,15 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: b0c7f9a937cf5e359ee87369776ce499ef90d2e43899bd5dbaabfc7fb1b13f89
+      checksum: bbcd52324ea02be5699c00dbc629d9830379bf8261e3861bce45fe00edc82d49
     - uuid: 23f92444-0366-47c8-abc2-f67e6bcd95f2
       name: quarkus/springboot
-      description: This ruleset gives hints to migrate from Spring Scheduled to Quarkus spring-scheduled extension
+      description: This ruleset gives hints to migrate from SpringBoot devtools to Quarkus
       directory: rulesets/quarkus
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 96a6a867379616acae8498bee1ab28a97c89b02e5136c1e7dcbc6ffe5a9a8148
+      checksum: a47c9bd48a6ae86993fa584b8fcea4e4b55664b5f08c05f67f0d99baa2da24ac
     - uuid: 9179982c-6007-4e40-b67c-9a7272e44e87
       name: rhr/springboot
       description: Verify the version of the Spring Boot framework is compatible with those supported by Red Hat Runtimes
@@ -146,12 +145,12 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 8629627f19199720950ba6cbb1b07fe428757e8233acdaffd87d09a5d0749284
+      checksum: 561326a9208de0f43f5b2cb0a231153e91f92b5fe0f8444d87b1eb0bcd53251e
     - uuid: 1b2a0eef-511c-4c07-a36a-d301b15d8207
       name: .technology-usage
-      description: This ruleset adds tags the configuration management technologies so are appropriately categorized on the technology reports.
+      description: This ruleset provides analysis of logging libraries.
       directory: rulesets/technology-usage
-      checksum: 8ba7febd5b1bae86f5c9f4fd001d9fc45e6bc769c14521fc8d70f064dc9bb1f8
+      checksum: 01f059b4862e99fbb9e479662bedb204ef1217bd2671199a1a5e84344476bba0
     - uuid: 2a3357e3-c79f-4875-a869-b38cb28ac498
       name: camel3
       description: Rules for changes between Camel 3.0 and Camel 4.0
@@ -177,10 +176,9 @@ items:
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 52a6943630f33b94378de4d5ddc7d9a6ab4212c1b9a6872a9cd52f9b2fde3cdf
     - uuid: e981e01a-5722-4df0-bf01-9e0694e7bb05
-      name: openshift
-      description: This ruleset detects the Java Mail API, which may be problematic when migrating an application to a cloud environment.
+      description: This ruleset detects logging configurations that may be problematic when migrating an application to a cloud environment.
       directory: rulesets/cloud-readiness
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 3d2d0dc81bb63b4f65ef11d84836c1c64ba5c8d0a69b6c52447a7e5412917742
+      checksum: 0014f87c8321f9daab2d01bb37064f0d528038babd8b8f61119e5bd13e42d3f9
