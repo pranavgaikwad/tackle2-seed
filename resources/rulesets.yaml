@@ -176,9 +176,10 @@ items:
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: 52a6943630f33b94378de4d5ddc7d9a6ab4212c1b9a6872a9cd52f9b2fde3cdf
     - uuid: e981e01a-5722-4df0-bf01-9e0694e7bb05
+      name: cloud-readiness
       description: This ruleset detects logging configurations that may be problematic when migrating an application to a cloud environment.
       directory: rulesets/cloud-readiness
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 0014f87c8321f9daab2d01bb37064f0d528038babd8b8f61119e5bd13e42d3f9
+      checksum: 918cdefc45854e0a52a4d1cf1c14097cf817fd70aa82b3432db07326e8a175e9
