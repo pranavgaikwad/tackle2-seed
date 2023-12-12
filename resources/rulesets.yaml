@@ -4,7 +4,7 @@ items:
     - uuid: 10667615-e067-45b4-a925-563a79ea0949
       name: .discovery
       directory: rulesets/00-discovery
-      checksum: 7f8031f5d8ac76ab525e72be2cb53461acc1da38a32c7378d01fa1750d993ba7
+      checksum: cca8ebc01fc12470769cfa93f35f5371658763f1dbbc4a28b237bf9cc12eef18
     - uuid: 2eed70c0-305c-4061-bb92-d638ee834e47
       name: azure/springboot
       description: Recommend OpenFeign instead of Feign.
@@ -12,7 +12,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 8a3e10a89514a01f82594db569fa8a72225712c1da85b75f3cfbce56144b89fc
+      checksum: 5f7cdeeba816cbdb4de04f09e0fe6a930ec05f6023a0f625eb126c9d8294e72a
     - uuid: e92057bc-5b66-4f7d-976f-f76aa3ad50e6
       name: camel3/camel2
       description: Rules for changes in XML file (e.g. pom.xml) to run on Apache Camel 3
@@ -137,7 +137,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: a47c9bd48a6ae86993fa584b8fcea4e4b55664b5f08c05f67f0d99baa2da24ac
+      checksum: 3d3851fa2b1d87fe060f55e7965c8bf05e4178ab047c83e655b012fab5c8957a
     - uuid: 9179982c-6007-4e40-b67c-9a7272e44e87
       name: rhr/springboot
       description: Verify the version of the Spring Boot framework is compatible with those supported by Red Hat Runtimes
@@ -158,7 +158,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: b0cd0eecbde043b1efb5eedb2946918a1a2bf72a23cc6e907afe682fee7e8c31
+      checksum: 7b244b76d2cf906621e8b908476825de7745086c4b66d16f1e9e1f9cbd16cc57
     - uuid: da06e738-168a-4384-a4cd-9607fdc4c39a
       name: jws5
       description: This ruleset provides analysis of applications that need to change their pom dependencies to upgrade dependencies that belong to the groupId `org.apache.tomcat`
@@ -166,15 +166,15 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 73ebb982a833fea7b411734822095d2418dc10052a53c7b745ea1f9503659673
+      checksum: bafbdb690b30041e3945a34b67aeffc72382aaf378d50289a7ded6b4619e7e27
     - uuid: b0db48ab-d75a-41cd-ad07-0bfbf875c25a
       name: openjdk17
-      description: This ruleset provides analysis regarding removed APIs in OpenJDK 18 to 21.
+      description: This ruleset provides analysis regarding deprecated APIs in OpenJDK 21.
       directory: rulesets/openjdk21
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 52a6943630f33b94378de4d5ddc7d9a6ab4212c1b9a6872a9cd52f9b2fde3cdf
+      checksum: d087636b17c9fe9b5865f08a34af7c192e8164fe6dcef48a27bb219f99abb0d2
     - uuid: e981e01a-5722-4df0-bf01-9e0694e7bb05
       name: cloud-readiness
       description: This ruleset detects logging configurations that may be problematic when migrating an application to a cloud environment.
