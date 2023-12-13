@@ -43,7 +43,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: d0b4e872c404de3c6709c7416a898c71c52796c25a26259345118b907416d6af
+      checksum: 11568b4b79e89f5e6f7a6e944d5ff4b4183f4ed8c2b71254eaf903d2fa5b0697
     - uuid: 3c471738-dfcf-46e8-b803-df07c304acc7
       name: eap8/eap7
       description: This ruleset provides analysis of Java EE applications that need to change certain CDI-related method calls.
@@ -137,7 +137,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 3d3851fa2b1d87fe060f55e7965c8bf05e4178ab047c83e655b012fab5c8957a
+      checksum: 7b49e7febf24639abc751b805d848e8a285e9b407a50aa824d32cf8f84bb3f66
     - uuid: 9179982c-6007-4e40-b67c-9a7272e44e87
       name: rhr/springboot
       description: Verify the version of the Spring Boot framework is compatible with those supported by Red Hat Runtimes
