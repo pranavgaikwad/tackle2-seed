@@ -2,6 +2,8 @@ PREPARE = -o bin/prepare github.com/konveyor/tackle2-seed/cmd/prepare
 RULESET = -o bin/ruleset github.com/konveyor/tackle2-seed/cmd/ruleset
 PKG = ./cmd/... ./pkg/...
 
+RULESET_ARGS ?=
+
 cmd: prepare ruleset
 
 prepare: fmt vet
@@ -21,6 +23,6 @@ run-prepare: prepare
 
 ruleset-patch: cmd
 	bin/prepare
-	bin/ruleset
+	bin/ruleset ${RULESET_ARGS}
 	bin/prepare
 
