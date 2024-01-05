@@ -20,7 +20,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 8b74d52eb49611a46848a09ecd1eaafd4c23690b451681e072b4001d489414ef
+      checksum: a0b7b61960e1ed7b277b1295297e4ad79322fab3a53bc290cbbd9a914f536537
     - uuid: eb900f9e-6ff3-413d-9023-167765ce1311
       name: droolsjbpm
       description: This ruleset provides help for migrating to a unified KIE (Knowledge Is Everything) API in the upgrade from version 5 to 6.
