@@ -20,7 +20,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: a0b7b61960e1ed7b277b1295297e4ad79322fab3a53bc290cbbd9a914f536537
+      checksum: 7db2410269d42f7f4183524b0c75b52b74eb39950a522d98f7c247c406c5f5b0
     - uuid: eb900f9e-6ff3-413d-9023-167765ce1311
       name: droolsjbpm
       description: This ruleset provides help for migrating to a unified KIE (Knowledge Is Everything) API in the upgrade from version 5 to 6.
@@ -36,14 +36,14 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: a6f85e5464a8865755126dc838b38c17c2646db81e296d520a63188dd3f68da9
+      checksum: 1b745dfb793070d00b9dc239ea14e98bdc2ae5dba6100016c7c2f4c1ffc908bc
     - uuid: 1a523b92-1fb3-422b-aaf7-35f43a259fb9
       name: eap7/weblogic/tests/data
       directory: rulesets/eap7
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 11568b4b79e89f5e6f7a6e944d5ff4b4183f4ed8c2b71254eaf903d2fa5b0697
+      checksum: de4b03117513cffd0ec48cea01f8d4e1d2dcc6b7604363e976e8ff64646a3485
     - uuid: 3c471738-dfcf-46e8-b803-df07c304acc7
       name: eap8/eap7
       description: This ruleset provides analysis of Java EE applications that need to change certain CDI-related method calls.
@@ -51,7 +51,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 82b9db8a9d4551122dc2354fe0653c4b97bdeabba90185d0a6d3245ae4da4f4c
+      checksum: 03e36d870895651de73489ed941002f0eaca76abd764aeea872db0893e921dbe
     - uuid: 288037b2-279f-4d11-9ea9-f91ff274447f
       name: eapxp/thorntail
       description: This ruleset provides analysis of Maven built applications that use Thorntail Maven Plugin, which should be replaced by JBoss EAP XP Bootable JAR Maven Plugin, when migrating to JBoss EAP XP.
@@ -73,7 +73,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: de8f47b185c24fc1e579d964c9b20f7e3f5ed5c4cf3d5fc52cf28f74aaefb43d
+      checksum: b50c61018e384a87cbf9138ecfa97960e0f7efb045983b4ca5a19045bbd45a4c
     - uuid: 416ffaad-3d9b-4808-953e-623d9f2d7314
       name: fuse-service-works/soa-p-5
       description: This ruleset provides analysis of JBoss SOA Platform 5 applications and provides information on how to migrate these to Red Hat JBoss Fuse Service Works
@@ -81,7 +81,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 00cd397c912f0e2dadbf21c8f6f57b3c669a15d7faca79de5eb0a136ab8fe194
+      checksum: 70d18b2053a86c346f651acfda2ccd1079bd6e48d9ffc4949951d1852550a7c3
     - uuid: e4db9c96-103c-409b-a347-098e7a04f172
       name: hibernate
       description: This ruleset provides analysis of deprecated Hibernate java constructs and their migration to newer one.
@@ -105,7 +105,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 9abee3d02dd50c303fff3ef488be9217e87533276d0598fa6b8fccd5d02d438c
+      checksum: 98bd947faddc0df37d675ad68802fd321d1cf50f8fb1ecdd2478f1601be028ad
     - uuid: c73c3986-64a5-4c2e-8149-fba57347af99
       name: openjdk17/openjdk11
       description: This ruleset provides analysis Security Manager classes and methods deprecated between OpenJDK 11 to 17.
@@ -113,7 +113,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 802a77dde1430aa1afddf3dc8f8b5b593afa757d53d1426b0d2e1ab08087abe3
+      checksum: b4389376cce0a2699bf4abaec76987b9d990fc0b6b451a8badb330156b5700b3
     - uuid: 53ba6b0f-ad48-4211-9673-a2065c2a4b4d
       name: openliberty/websphere
       description: This ruleset identifies usage of Java APIs and technologies which are not provided by Open Liberty.
@@ -137,7 +137,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 7b49e7febf24639abc751b805d848e8a285e9b407a50aa824d32cf8f84bb3f66
+      checksum: dbc284bdaaeb00d03a30aca37fd7210dbb28708c319d18f1509d796bf66bab34
     - uuid: 9179982c-6007-4e40-b67c-9a7272e44e87
       name: rhr/springboot
       description: Verify the version of the Spring Boot framework is compatible with those supported by Red Hat Runtimes
@@ -174,7 +174,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: d087636b17c9fe9b5865f08a34af7c192e8164fe6dcef48a27bb219f99abb0d2
+      checksum: d8bdeb9913217c22954267d10f0211e4de11dbe59cb215afbab66062c3155951
     - uuid: e981e01a-5722-4df0-bf01-9e0694e7bb05
       name: cloud-readiness
       description: This ruleset detects logging configurations that may be problematic when migrating an application to a cloud environment.
