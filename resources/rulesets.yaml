@@ -150,7 +150,7 @@ items:
       name: .technology-usage
       description: This ruleset provides analysis of logging libraries.
       directory: rulesets/technology-usage
-      checksum: 01f059b4862e99fbb9e479662bedb204ef1217bd2671199a1a5e84344476bba0
+      checksum: 2740365fc2817096f84d2013b527b5227a7f085a5ac709a343fd626f38d75dc0
     - uuid: 2a3357e3-c79f-4875-a869-b38cb28ac498
       name: camel3
       description: Rules for changes between Camel 3.0 and Camel 4.0
