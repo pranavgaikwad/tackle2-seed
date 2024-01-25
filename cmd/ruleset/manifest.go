@@ -4,13 +4,14 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/konveyor/tackle2-seed/pkg"
-	"gopkg.in/yaml.v3"
 	"io"
 	"io/ioutil"
 	"os"
 	"path"
 	"strings"
+
+	"github.com/konveyor/tackle2-seed/pkg"
+	"gopkg.in/yaml.v3"
 )
 
 type Manifest struct {

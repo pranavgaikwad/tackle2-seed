@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"path"
+	"strings"
+
 	"github.com/google/uuid"
 	"github.com/konveyor/tackle2-seed/pkg"
 	"github.com/pborman/getopt/v2"
 	"gopkg.in/yaml.v3"
-	"os"
-	"path"
-	"strings"
 )
 
 func main() {

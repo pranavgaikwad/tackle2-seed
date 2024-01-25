@@ -1,11 +1,12 @@
 package pkg
 
 import (
-	liberr "github.com/jortel/go-utils/error"
-	"gopkg.in/yaml.v3"
 	"os"
 	"path"
 	"strings"
+
+	liberr "github.com/jortel/go-utils/error"
+	"gopkg.in/yaml.v3"
 )
 
 // RuleSet constants

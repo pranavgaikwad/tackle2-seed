@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/konveyor/tackle2-seed/pkg"
-	"github.com/pborman/getopt/v2"
 	"io/ioutil"
 	"os"
 	"path"
+
+	"github.com/konveyor/tackle2-seed/pkg"
+	"github.com/pborman/getopt/v2"
 )
 
 const (
