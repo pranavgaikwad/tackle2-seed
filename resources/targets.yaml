@@ -8,10 +8,10 @@ items:
       imagepath: images/eap.svg
       choice: true
       labels:
-        - name: JBoss EAP 7
-          label: konveyor.io/target=eap7
         - name: JBoss EAP 8
           label: konveyor.io/target=eap8
+        - name: JBoss EAP 7
+          label: konveyor.io/target=eap7
     - uuid: 9a14647c-0cdf-45e7-8399-84167500385a
       name: Containerization
       description: A comprehensive set of cloud and container readiness rules to assess applications for suitability for deployment on Kubernetes.
