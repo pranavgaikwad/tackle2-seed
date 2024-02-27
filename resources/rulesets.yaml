@@ -12,7 +12,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: e157a53df0da7798fe9755b8e5a836a3c254dfd7b61b316c6da93933876b7959
+      checksum: 2e0d6f382beda8cdac1cb64139daf50cdf0c65cf0066ee4f7901d12b6b9341aa
     - uuid: e92057bc-5b66-4f7d-976f-f76aa3ad50e6
       name: camel3/camel2
       description: Rules for changes in XML file (e.g. pom.xml) to run on Apache Camel 3
@@ -20,7 +20,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: b2ef729ea8979bc2f8c99ae5c6ae6668a357bc1b95126c78a732feb84d581259
+      checksum: 95b2f53bff9fea0279ae23bbc85e1efd5a3393d77b7ea096b1153854430b94c2
     - uuid: eb900f9e-6ff3-413d-9023-167765ce1311
       name: droolsjbpm
       description: This ruleset provides help for migrating to a unified KIE (Knowledge Is Everything) API in the upgrade from version 5 to 6.
@@ -36,14 +36,14 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: ea12ed70465c0fed9ca758cd8988a72192f764d0a0a811dc373bc936cfea8dd3
+      checksum: b77bfdf178c1b1073478538b8861a2209455667640a86eff316ae669d3aedaff
     - uuid: 1a523b92-1fb3-422b-aaf7-35f43a259fb9
       name: eap7/weblogic/tests/data
       directory: rulesets/eap7
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: a2281ae04cbb1dbbae4039bf27ec125d8fad891f42973c0a1a1babed1adfdd8f
+      checksum: 1917b5da349f3a65ef92fcdbc223fc49b84ffa02e19dec97504d8ef9e8387fc3
     - uuid: 3c471738-dfcf-46e8-b803-df07c304acc7
       name: eap8/eap7
       description: This ruleset provides analysis of Java EE applications that need to change certain CDI-related method calls.
@@ -51,7 +51,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: 56c2673415780304dc5d062d34d5a39e51a4f570e30815844bbb75eea831a1b9
+      checksum: 09561c82a5a89ce4c3e6491db30fdebe273986bd8a989b9270b88d1f0fffd48e
     - uuid: 288037b2-279f-4d11-9ea9-f91ff274447f
       name: eapxp/thorntail
       description: This ruleset provides analysis of Maven built applications that use Thorntail Maven Plugin, which should be replaced by JBoss EAP XP Bootable JAR Maven Plugin, when migrating to JBoss EAP XP.
@@ -89,7 +89,7 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: aca1ef6edd83e56f0c962010d3b68b17e802a1bf0703f68e5e38a6d101d1f091
+      checksum: 8bb7e139031629bbf792c99274fe2aad6047ba2a9aaec8f45cb3474ce6bd525f
     - uuid: 72b74cb6-dba7-452d-93a3-1a26855051e0
       name: openjdk7/oraclejdk7
       description: This ruleset provides analysis with respect to the migration from OracleJDK to OpenJDK.
@@ -150,7 +150,7 @@ items:
       name: .technology-usage
       description: This ruleset provides analysis of logging libraries.
       directory: rulesets/technology-usage
-      checksum: dc84a589fa0ea74647b066351ec83b45160887d30a24a3537ad099955fa9e080
+      checksum: a8d9066199c6e4876650e7d12f5c126c1bdb76df16460333a7e63230b47b5c4e
     - uuid: 2a3357e3-c79f-4875-a869-b38cb28ac498
       name: camel3
       description: Rules for changes between Camel 3.0 and Camel 4.0
@@ -182,4 +182,4 @@ items:
       dependencies:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
-      checksum: c6b506cc1cd2b467d197bcf6603de99e129dbc4a33eacf0c0518bd7ec339a736
+      checksum: d8f7458f5aee460d23e44e6f92f6f9e0218bfedfd6ffc7e7a74b45f71fd0044f
