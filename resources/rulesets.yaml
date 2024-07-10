@@ -4,7 +4,7 @@ items:
     - uuid: 10667615-e067-45b4-a925-563a79ea0949
       name: .discovery
       directory: rulesets/00-discovery
-      checksum: 607f7cce00b3e8a495ffa6ccd60000e6d1708a3b52ebd3ed8148770e46585704
+      checksum: 309bc9b01fa0c9435dd155e4441c83d44d843e73e287ac66f5ce028684feca6c
     - uuid: 2eed70c0-305c-4061-bb92-d638ee834e47
       name: azure/springboot
       description: Recommend OpenFeign instead of Feign.
@@ -150,7 +150,7 @@ items:
       name: .technology-usage
       description: This ruleset provides analysis of logging libraries.
       directory: rulesets/technology-usage
-      checksum: 290db0c4bee1a155ca2663f7f144b5be0532a852793fa2332c816c4abde66e18
+      checksum: 048bc1bf70a8382eb2c8d2e68421ab1ec48ca3db0f342242654a08c1f221e8e4
     - uuid: 2a3357e3-c79f-4875-a869-b38cb28ac498
       name: camel3
       description: Rules for changes between Camel 3.0 and Camel 4.0
@@ -190,3 +190,11 @@ items:
         - 10667615-e067-45b4-a925-563a79ea0949
         - 1b2a0eef-511c-4c07-a36a-d301b15d8207
       checksum: f784dd8cb1f99abf28270f0220832a0026b224b91f1d1c27f1227afd49d36266
+    - uuid: eed927d0-fc63-4b64-a75c-ab0bc599c8c6
+      name: dotnet8/dotnetframework45
+      description: This ruleset provides analysis with respect to API changes between .NET Framework 4.5 and .NET 8.
+      directory: rulesets/dotnet8
+      dependencies:
+        - 10667615-e067-45b4-a925-563a79ea0949
+        - 1b2a0eef-511c-4c07-a36a-d301b15d8207
+      checksum: 8209bb37c8709ca1859aa78aab861cd868645bdfb29d2f96e034621a9078c00b
